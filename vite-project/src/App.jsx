@@ -1,9 +1,7 @@
-function App() {
-  return (
-    <>
-      <div> Đây là cấu trúc dự án sẽ xài </div>
-    </>
-  );
-}
+import useRoutesCustom from "./routes/useRoutesCustom";
 
+function App() {
+  const routes = useRoutesCustom();
+  return routes;
+}
 export default App;
