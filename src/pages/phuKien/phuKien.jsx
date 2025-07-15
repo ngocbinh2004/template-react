@@ -1,9 +1,10 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-const ProductDetail = () => {
+const PhuKien = () => {
   const location = useLocation();
-  return <div>ProductDetail</div>;
+  console.log(location.state);
+  return <div>PhuKien</div>;
 };
 
-export default ProductDetail;
+export default PhuKien;

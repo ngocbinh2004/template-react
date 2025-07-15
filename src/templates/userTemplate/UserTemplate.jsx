@@ -1,13 +1,16 @@
 import React from "react";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import { Outlet } from "react-router-dom";
-import Header from "./children/Header.jsx";
-const { Content, Footer } = Layout;
+import Header from "./children/Header";
+import Footer from "./children/Footer";
+
+const { Content } = Layout;
 
 const UserTemplate = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
   return (
     <Layout>
       <Header />
@@ -20,7 +23,6 @@ const UserTemplate = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-          Content
           <Outlet />
         </div>
       </Content>
@@ -28,4 +30,5 @@ const UserTemplate = () => {
     </Layout>
   );
 };
+
 export default UserTemplate;

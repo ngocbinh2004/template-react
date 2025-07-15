@@ -1,27 +1,23 @@
-import { useRoutes } from "react-router-dom";
-import HomePage from "../pages/Homepage/HomePage";
-import ProductDetail from "../pages/productDetail/ProductDetail";
-import UserTemplate from "../templates/userTamplate/UserTemplate";
+import { Routes, Route, useRoutes } from "react-router-dom";
 import { PATH_APP } from "./path";
-const useRoutesCustom = () => {
-  // trang chu - chi tiet san pham
+import HomePage from "../pages/homePage/HomePage";
+import ProductDetail from "../pages/productDetail/ProductDetail";
+import UserTemplate from "../templates/userTemplate/UserTemplate";
+import NotFound from "../components/NotFound/NotFound";
 
+const useRoutesCustom = () => {
   const routes = useRoutes([
     {
       path: PATH_APP.homePage,
       element: <UserTemplate />,
       children: [
-        {
-          index: true,
-          element: <HomePage />,
-        },
-        {
-          path: PATH_APP.ProductDetail,
-          element: <ProductDetail />,
-        },
+        { index: true, element: <HomePage /> },
+        { path: PATH_APP.productDetail, element: <ProductDetail /> },
       ],
     },
+    { path: "*", element: <NotFound /> },
   ]);
+
   return routes;
 };
 
