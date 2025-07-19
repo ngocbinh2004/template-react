@@ -31,6 +31,12 @@ const arrLink = [
     icon: <CardSim />,
     path: "/smart-watch",
   },
+  {
+    id: 5,
+    title: "Bài tập lắc xí ngầu",
+    icon: <null />,
+    path: "/bai-tap-lac-xi-ngau",
+  },
 ];
 
 const Header = () => {
